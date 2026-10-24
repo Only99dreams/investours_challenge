@@ -612,10 +612,16 @@ h4 {
 }
 
 .hero__note {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.88rem;
-  font-style: italic;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  max-width: 760px;
+  margin-inline: auto;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1.55;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 /* ============================================================
@@ -1967,7 +1973,7 @@ h4 {
   }
 
   .hero__note {
-    font-size: 0.8rem;
+    font-size: 0.92rem;
   }
 
   .marquee {
