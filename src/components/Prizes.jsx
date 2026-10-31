@@ -1,33 +1,29 @@
 import { APPLY_URL } from '../data';
-import { ArrowUpRight, Calendar, Star, Trophy } from './Icons';
+import { ArrowUpRight, Calendar, Gift, Star, Trophy } from './Icons';
 import Reveal from './Reveal';
 import SectionHead from './SectionHead';
 
 const PRIZES = [
   {
-    variant: 'gold',
-    Icon: Trophy,
-    label: 'Track winner',
-    title: 'Creative Content Track',
-    amount: '₦600,000',
-    note: 'Cash / grant for the Track Winner',
+    title: 'Video Creators Track',
+    amount: '₦500,000',
+    note: 'Cash prize for the Video Creators Track winner.',
   },
   {
-    variant: 'gold',
-    Icon: Trophy,
-    label: 'Track winner',
+    title: 'Ebook Creators Track',
+    amount: '₦500,000',
+    note: 'Cash prize for the Ebook Creators Track winner.',
+  },
+  {
     title: 'Business Idea Track',
-    amount: '₦600,000',
-    note: 'Cash / grant for the Track Winner',
+    amount: '₦500,000',
+    note: 'Cash prize for the Business Idea Track winner.',
   },
-  {
-    variant: 'silver',
-    Icon: Star,
-    label: 'Runners-up',
-    title: 'Runners-up & special awards',
-    amount: '+Rewards',
-    note: 'Additional rewards for four runners-up, plus a special Campus/NYSC Champion award under applicable conditions.',
-  },
+];
+
+const RUNNER_REWARDS = [
+  'One Investours-branded T-shirt',
+  'One-year Investours platform subscription',
 ];
 
 export default function Prizes() {
@@ -42,19 +38,19 @@ export default function Prizes() {
                 Prizes &amp; the <em>Grand Finale</em>
               </>
             }
-            sub="Two track winners, four runners-up, and one unforgettable live stage."
+            sub="Three track winners. Six runners-up. ₦1,500,000 in total cash prizes."
           />
         </Reveal>
 
         <Reveal className="prizes__grid">
-          {PRIZES.map(({ variant, Icon, label, title, amount, note }) => (
-            <article className={`prize-card prize-card--${variant}`} key={title}>
+          {PRIZES.map(({ title, amount, note }) => (
+            <article className="prize-card prize-card--gold" key={title}>
               <span className="prize-card__label">
                 <span className="prize-card__dot" />
-                {label}
+                Track winner
               </span>
               <span className="prize-card__trophy">
-                <Icon size={26} />
+                <Trophy size={26} />
               </span>
               <h3>{title}</h3>
               <div className="prize-card__amount">{amount}</div>
@@ -69,23 +65,36 @@ export default function Prizes() {
               <Calendar size={24} />
             </span>
             <div>
-              <span className="finale__eyebrow">Grand Finale · AIWC 1.0</span>
-              <h3>19 December 2026</h3>
+              <span className="finale__eyebrow">Grand Finale · AI Wealth Conference (AIWC)</span>
+              <h3>9 January 2027</h3>
               <p className="finale__note">
-                Transportation stipends may be provided to finalists who need assistance travelling
-                to the Grand Finale, subject to the competition&rsquo;s arrangements.
+                The top qualifying entries advance to the live finale at AIWC, where the panel of
+                judges selects the winners.
               </p>
             </div>
           </div>
 
-          <figure className="prizes__poster">
-            <img
-              src="/images/image1.jpg"
-              alt="Official prize pool artwork: ₦1,500,000 plus amazing rewards, with a ₦50,000 Campus/NYSC champion allowance"
-              loading="lazy"
-            />
-            <figcaption>Official prize-pool artwork</figcaption>
-          </figure>
+          <div className="runners">
+            <span className="finale__icon">
+              <Gift size={24} />
+            </span>
+            <div>
+              <span className="finale__eyebrow">Six runners-up · Additional rewards</span>
+              <h3>
+                <Star size={18} /> Runner-up Rewards
+              </h3>
+              <ul className="runners__list">
+                {RUNNER_REWARDS.map((reward) => (
+                  <li key={reward}>{reward}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="prizes__legal" delay={100}>
+          Additional participation benefits, eligibility conditions, and rewards are subject to the
+          official Competition Terms &amp; Conditions.
         </Reveal>
 
         <Reveal className="prizes__cta" delay={120}>
@@ -95,7 +104,7 @@ export default function Prizes() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Compete for these prizes
+            Start your application
             <ArrowUpRight size={18} />
           </a>
         </Reveal>

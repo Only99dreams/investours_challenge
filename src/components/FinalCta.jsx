@@ -15,19 +15,24 @@ export default function FinalCta() {
         <Reveal className="cta__inner">
           <span className="kicker kicker--gold">
             <Sparkle size={13} />
-            Applications are open
+            Final call to action
           </span>
 
           <h2 className="h2">
-            Your talent or idea deserves a <em>chance</em>.
+            Your Talent or Idea Deserves a <em>Chance</em>.
           </h2>
 
           <p className="cta__sub">
-            Whether you&rsquo;re a creator with a story to tell or an entrepreneur with an idea worth
-            building, this is your opportunity to take the next step.
+            Whether you&rsquo;re a video creator with a story to tell, an author with knowledge to
+            share, or an entrepreneur with an idea worth building, this is your opportunity to take
+            the next step.
           </p>
 
-          <p className="cta__tagline">From creative ideas to world-class enterprises.</p>
+          <p className="cta__tagline">
+            Three Tracks. Three Winners. ₦1,500,000 in Cash Prizes.
+            <br />
+            From Creative Ideas to World-Class Enterprises.
+          </p>
 
           <a
             className="btn btn--gold btn--lg"
@@ -35,7 +40,7 @@ export default function FinalCta() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Register now
+            Register Now
             <ArrowUpRight size={18} />
           </a>
 

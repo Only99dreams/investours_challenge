@@ -5,7 +5,14 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero__bg" aria-hidden="true">
-        <img className="hero__bg-img" src="/images/image1.jpg" alt="" />
+        <img
+          className="hero__bg-img"
+          src="/images/image1.jpg"
+          alt=""
+          width="1280"
+          height="854"
+          fetchPriority="high"
+        />
         <div className="hero__bg-overlay" />
       </div>
 
@@ -18,18 +25,19 @@ export default function Hero() {
         </h1>
 
         <p className="hero__sub">
-          Are you a content creator, aspiring entrepreneur, or early-stage business owner? The
-          Investours Creativity &amp; Enterprise Challenge gives you an opportunity to showcase
-          your talent, develop your ideas, access mentorship, and compete for a share of the prize
-          pool.
+          Are you a video creator, aspiring ebook author, entrepreneur, or early-stage business
+          owner? The Investours Creativity &amp; Enterprise Challenge gives you an opportunity to
+          showcase your talent, transform your ideas into valuable products, access mentorship, and
+          compete for exciting cash prizes and rewards.
         </p>
 
         <div className="hero__prize-badge">
           <span className="hero__prize-trophy">
             <Trophy size={34} />
           </span>
-          <div className="hero__prize-amount">₦1,500,000+</div>
-          <p className="hero__prize-label">In cash, grants &amp; rewards</p>
+          <div className="hero__prize-amount">₦1,500,000</div>
+          <p className="hero__prize-label">In total cash prizes</p>
+          <p className="hero__prize-split">Three Tracks. Three Winners. Six Runners-up.</p>
         </div>
 
         <div className="hero__actions">
@@ -42,8 +50,8 @@ export default function Hero() {
             Apply Now
             <ArrowUpRight size={18} />
           </a>
-          <a className="btn btn--outline-gold btn--lg" href="#prizes">
-            Explore the Prizes
+          <a className="btn btn--outline-gold btn--lg" href="#tracks">
+            Choose Your Track
             <ArrowRight size={18} />
           </a>
         </div>

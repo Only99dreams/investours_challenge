@@ -2,7 +2,7 @@ export const APPLY_URL = 'https://forms.gle/QLbjhmhYFrw5KArC6';
 
 export const NAV_LINKS = [
   { label: 'Tracks', href: '#tracks' },
-  { label: 'Why compete', href: '#gains' },
+  { label: 'What you gain', href: '#gains' },
   { label: 'How it works', href: '#how' },
   { label: 'Prizes', href: '#prizes' },
   { label: 'Moments', href: '#gallery' },

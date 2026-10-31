@@ -1,29 +1,37 @@
 import { APPLY_URL } from '../data';
-import { ArrowUpRight, Bulb, Film } from './Icons';
+import { ArrowUpRight, Book, Bulb, Film } from './Icons';
 import Reveal from './Reveal';
 import SectionHead from './SectionHead';
 
 const TRACKS = [
   {
     index: '01',
-    kicker: 'For creators & storytellers',
-    title: 'Creative Content Track',
+    kicker: 'For video creators & digital storytellers',
+    title: 'Video Creators Track',
     description:
-      'For content creators, digital storytellers, and creatives ready to showcase their work, grow their audience, and build a stronger brand.',
-    tags: ['Content creators', 'Digital storytellers', 'Brand builders'],
-    image: '/images/image3.jpg',
-    alt: 'Creator filming with a ring light — Creative Content Track',
+      'For video creators, digital storytellers, and creatives ready to showcase their talent, create engaging content, grow their audience, and build a stronger brand.',
+    image: '/images/track1.jpg',
+    alt: 'Video creator at work — Video Creators Track',
     Icon: Film,
   },
   {
     index: '02',
-    kicker: 'For founders & builders',
+    kicker: 'For writers, authors & digital publishers',
+    title: 'Ebook Creators Track',
+    description:
+      'For writers, authors, educators, and aspiring digital publishers ready to transform their knowledge, experiences, and ideas into valuable ebooks.',
+    image: '/images/track2.jpg',
+    alt: 'Writer creating an ebook — Ebook Creators Track',
+    Icon: Book,
+  },
+  {
+    index: '03',
+    kicker: 'For aspiring entrepreneurs & business owners',
     title: 'Business Idea Track',
     description:
       'For aspiring entrepreneurs and early-stage business owners ready to showcase their ideas, strengthen their business models, and build sustainable enterprises.',
-    tags: ['Aspiring founders', 'Early-stage owners', 'Problem solvers'],
-    image: '/images/image2.jpg',
-    alt: 'Entrepreneur planning a business model — Business Idea Track',
+    image: '/images/trac3.jpg',
+    alt: 'Entrepreneur developing a business idea — Business Idea Track',
     Icon: Bulb,
   },
 ];
@@ -39,7 +47,7 @@ export default function Tracks() {
                 Choose your <em>track</em>
               </>
             }
-            sub="Two paths. One goal: building something great."
+            sub="Choose the track that best matches your creativity or entrepreneurial ambition."
           />
         </Reveal>
 
@@ -50,7 +58,14 @@ export default function Tracks() {
               <Reveal key={track.title} className="track-slot" delay={index * 120}>
                 <article className="track-card">
                   <div className="track-card__media">
-                    <img src={track.image} alt={track.alt} loading="lazy" />
+                    <img
+                      src={track.image}
+                      alt={track.alt}
+                      width="1280"
+                      height="853"
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <span className="track-card__shade" />
                     <span className="track-card__index">Track {track.index}</span>
                     <span className="track-card__icon">
@@ -62,12 +77,7 @@ export default function Tracks() {
                     <span className="track-card__kicker">{track.kicker}</span>
                     <h3>{track.title}</h3>
                     <p>{track.description}</p>
-
-                    <ul className="track-card__tags">
-                      {track.tags.map((tag) => (
-                        <li key={tag}>{tag}</li>
-                      ))}
-                    </ul>
+                    <p className="track-card__prize">Compete for ₦500,000!</p>
 
                     <a
                       className="btn btn--violet track-card__cta"
@@ -84,6 +94,10 @@ export default function Tracks() {
             );
           })}
         </div>
+
+        <Reveal className="tracks__note" delay={100}>
+          All track winners are subject to the official competition rules and judging process.
+        </Reveal>
       </div>
     </section>
   );

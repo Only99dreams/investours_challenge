@@ -1,12 +1,13 @@
 import { Sparkle } from './Icons';
 
 const ITEMS = [
-  '₦1,500,000+ prize pool',
-  'Creative Content Track',
+  '₦1,500,000 in cash prizes',
+  'Video Creators Track',
+  'Ebook Creators Track',
   'Business Idea Track',
-  'Mentorship & bootcamps',
-  '30% revenue sharing',
-  'Grand Finale at AIWC 1.0',
+  'Six runner-up rewards',
+  'Training & mentorship',
+  'Grand Finale at AIWC',
 ];
 
 export default function Marquee() {

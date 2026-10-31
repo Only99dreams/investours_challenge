@@ -65,7 +65,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p>&copy; 2026 Investours World Limited. All rights reserved.</p>
-          <p className="footer__motto">From creative ideas to world-class enterprises.</p>
+          <p className="footer__motto">From Creative Ideas to World-Class Enterprises.</p>
         </div>
       </div>
     </footer>

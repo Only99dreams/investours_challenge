@@ -176,6 +176,36 @@ export function Bulb(props) {
   );
 }
 
+export function Book(props) {
+  return (
+    <Svg {...props}>
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z" />
+      <path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5Z" />
+      <path d="M8 7h8M8 10.5h5" />
+    </Svg>
+  );
+}
+
+export function Gift(props) {
+  return (
+    <Svg {...props}>
+      <rect x="3.5" y="9" width="17" height="11.5" rx="1.8" />
+      <path d="M2.5 9h19v3.5h-19zM12 9v11.5" />
+      <path d="M12 9H8.2a2.7 2.7 0 1 1 0-5.4C10.8 3.6 12 9 12 9Zm0 0h3.8a2.7 2.7 0 1 0 0-5.4C13.2 3.6 12 9 12 9Z" />
+    </Svg>
+  );
+}
+
+export function Bot(props) {
+  return (
+    <Svg {...props}>
+      <rect x="4" y="7.5" width="16" height="12" rx="3" />
+      <path d="M12 3.5v4M8.5 12.5h.01M15.5 12.5h.01M9.5 16h5" />
+      <path d="M2 12v3M22 12v3" />
+    </Svg>
+  );
+}
+
 export function Phone(props) {
   return (
     <Svg {...props}>

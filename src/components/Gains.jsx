@@ -1,38 +1,43 @@
 import { APPLY_URL } from '../data';
-import { ArrowUpRight, Cap, Chart, Coins, Medal, Star } from './Icons';
+import { ArrowUpRight, Bot, Cap, Chart, Coins, Gift, Medal, Star } from './Icons';
 import Reveal from './Reveal';
 import SectionHead from './SectionHead';
 
 const GAINS = [
   {
     Icon: Coins,
-    title: 'Cash prizes & rewards',
-    text: 'Compete for a share of the ₦1,500,000+ prize pool.',
-    span: 2,
+    title: 'Cash Prizes',
+    text: 'Each of the three track winners receives ₦500,000.',
+  },
+  {
+    Icon: Gift,
+    title: 'Runner-up Rewards',
+    text: 'Six runners-up receive an Investours-branded T-shirt and a one-year Investours platform subscription each.',
   },
   {
     Icon: Cap,
-    title: 'Training & mentorship',
-    text: 'Build your talent, skills, brand, and business potential through expert-led bootcamps.',
-    span: 2,
+    title: 'Training & Mentorship',
+    text: 'Develop your creative skills, personal brand, business model, or entrepreneurial potential.',
+  },
+  {
+    Icon: Bot,
+    title: 'AI-Powered Solutions',
+    text: "Explore opportunities to support your creativity and enterprise with Investours' AI-powered solutions, including BookMaker AI.",
   },
   {
     Icon: Medal,
-    title: 'Certification opportunity',
-    text: 'Qualify for the Elite Founders & Creators Circle (Stage 3).',
-    span: 2,
+    title: 'Certification Opportunity',
+    text: "Qualify for the Elite Founders & Creators Circle, subject to the competition's progression requirements.",
   },
   {
     Icon: Chart,
-    title: '30% platform revenue sharing',
+    title: '30% Platform Revenue Sharing',
     text: 'Eligible contestants can earn a share of eligible subscription and credit-pack revenue attributable to their validated competition content, subject to the official terms.',
-    span: 3,
   },
   {
     Icon: Star,
-    title: 'Grand Finale exposure',
-    text: 'Top qualifying entries advance to the live finale at the AIWC 1.0 conference.',
-    span: 3,
+    title: 'Grand Finale Exposure',
+    text: 'The top qualifying entries advance to the live finale at AI Wealth Conference (AIWC).',
     wide: true,
   },
 ];
@@ -54,16 +59,12 @@ export default function Gains() {
         </Reveal>
 
         <Reveal className="gains__grid">
-          {GAINS.map(({ Icon, title, text, span, wide }, index) => (
-            <article
-              key={title}
-              className={`gain-card gain-card--span-${span} ${wide ? 'gain-card--wide' : ''}`}
-            >
+          {GAINS.map(({ Icon, title, text, wide }) => (
+            <article key={title} className={`gain-card ${wide ? 'gain-card--wide' : ''}`}>
               <div className="gain-card__top">
                 <span className="gain-card__icon">
                   <Icon size={22} />
                 </span>
-                <span className="gain-card__num">{String(index + 1).padStart(2, '0')}</span>
               </div>
               <div className="gain-card__text">
                 <h3>{title}</h3>

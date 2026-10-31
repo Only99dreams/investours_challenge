@@ -603,6 +603,18 @@ h4 {
   text-transform: uppercase;
 }
 
+.hero__prize-split {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(245, 200, 0, 0.28);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -684,8 +696,8 @@ h4 {
 
 .tracks__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
   align-items: stretch;
 }
 
@@ -803,6 +815,24 @@ h4 {
   font-size: 0.96rem;
 }
 
+.track-card__body .track-card__prize {
+  margin-bottom: 24px;
+  color: var(--purple);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.tracks__note {
+  max-width: 760px;
+  margin: 38px auto 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
 .track-card__tags {
   display: flex;
   flex-wrap: wrap;
@@ -835,7 +865,7 @@ h4 {
 
 .gains__grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-bottom: 48px;
 }
@@ -864,6 +894,10 @@ h4 {
 
 .gain-card--span-3 {
   grid-column: span 3;
+}
+
+.gain-card--wide {
+  grid-column: 1 / -1;
 }
 
 .gain-card__top {
@@ -910,20 +944,14 @@ h4 {
 .steps {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px 24px;
   max-width: 1000px;
   margin: 0 auto 32px;
 }
 
 .steps::before {
-  content: '';
-  position: absolute;
-  top: 32px;
-  right: 12.5%;
-  left: 12.5%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--purple), var(--yellow), var(--purple), var(--yellow));
-  border-radius: 2px;
+  display: none;
 }
 
 .step {
@@ -1137,6 +1165,64 @@ h4 {
   font-size: 0.85rem;
   font-style: italic;
   line-height: 1.6;
+}
+
+.runners {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 26px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.runners h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--yellow);
+  font-size: 1.15rem;
+}
+
+.runners h3 svg {
+  flex: 0 0 auto;
+}
+
+.runners__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.runners__list li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.runners__list li::before {
+  content: '';
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.prizes__legal {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .prizes__poster {
@@ -1784,6 +1870,10 @@ h4 {
     grid-column: span 2;
   }
 
+  .prize-card:last-child {
+    grid-column: span 2;
+  }
+
   .prizes__lower {
     grid-template-columns: 1fr;
     max-width: 700px;
@@ -1858,11 +1948,19 @@ h4 {
     grid-column: auto;
   }
 
+  .prize-card:last-child {
+    grid-column: auto;
+  }
+
   .prize-card {
     min-height: 0;
   }
 
   .finale {
+    flex-direction: column;
+  }
+
+  .runners {
     flex-direction: column;
   }
 

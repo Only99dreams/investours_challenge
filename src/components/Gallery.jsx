@@ -42,7 +42,14 @@ export default function Gallery() {
               aria-label={`View photo ${index + 1}: ${photo.caption}`}
               style={{ '--focus': photo.focus }}
             >
-              <img src={photo.src} alt={photo.alt} loading="lazy" />
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width="1080"
+                height="810"
+                loading="lazy"
+                decoding="async"
+              />
               <span className="shot__overlay" />
               <span className="shot__num">{String(index + 1).padStart(2, '0')}</span>
               <span className="shot__caption">
